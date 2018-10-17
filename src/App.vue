@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <div class="img">
-      <img width="25%" src="./assets/logo.png">
-    </div>
     <input
       v-model="input"
       class="input"
