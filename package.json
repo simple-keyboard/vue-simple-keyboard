@@ -13,7 +13,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "simple-keyboard": "2.5.9",
+    "simple-keyboard": "latest",
     "vue": "^2.5.2"
   },
   "devDependencies": {
