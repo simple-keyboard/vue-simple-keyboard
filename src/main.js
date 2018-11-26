@@ -8,22 +8,28 @@ import "simple-keyboard/build/css/index.css";
 
 Vue.config.productionTip = false;
 
+let keyboard;
+
 /* eslint-disable no-new */
 let vueInstance = new Vue({
   el: "#app",
   components: { App },
-  template: `<App :input.sync="input" />`,
+  template: `<App :input.sync="input" :onInputChange="onInputChange"/>`,
   data: {
     input: ""
   },
   methods: {
     update(input) {
       this.input = input;
+    },
+    onInputChange(e) {
+      let input = e.target.value;
+      keyboard.setInput(input);
     }
   }
 });
 
-let keyboard = new Keyboard({
+keyboard = new Keyboard({
   onChange: input => onChange(input),
   onKeyPress: button => onKeyPress(button)
 });
