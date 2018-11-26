@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <input
-      v-model="input"
+      :value="input"
+      @input="onInputChange"
       class="input"
       placeholder="Tap on the virtual keyboard to start"
-      readonly
     />
     <div class="simple-keyboard"></div>
   </div>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  props: ["input"],
+  props: ["input", "onInputChange"]
 };
 </script>
 
