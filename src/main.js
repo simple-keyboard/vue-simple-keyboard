@@ -32,7 +32,8 @@ let vueInstance = new Vue({
 
 keyboard = new Keyboard({
   onChange: input => onChange(input),
-  onKeyPress: button => onKeyPress(button)
+  onKeyPress: button => onKeyPress(button),
+  theme: "hg-theme-default myTheme1"
 });
 
 console.log(keyboard);
