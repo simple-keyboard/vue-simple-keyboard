@@ -10,3 +10,89 @@ input {
 .simple-keyboard {
   max-width: 850px;
 }
+
+/*
+  Theme: myTheme2
+*/
+.simple-keyboard.myTheme2 {
+  padding: 0;
+  border-radius: 5px;
+  margin: 10px;
+  width: calc(100% - 20px);
+}
+
+.simple-keyboard.myTheme2 .hg-row {
+  margin: 0;
+}
+
+.simple-keyboard.myTheme2 .hg-row:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.simple-keyboard.myTheme2 .hg-row .hg-button {
+  background: #9cbffb;
+  color: white;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  padding: 15px;
+  box-sizing: border-box;
+  height: 50px;
+  text-align: center;
+}
+
+.simple-keyboard.myTheme2 .hg-row .hg-button:not(:last-child) {
+  margin-right: 0;
+}
+
+.simple-keyboard.myTheme2 .hg-row .hg-button span {
+  transition: all 0.3s ease-in-out;
+}
+
+.simple-keyboard.myTheme2 .hg-row .hg-button:not(:active) {
+  animation: myTheme2Anim 2s infinite alternate;
+}
+
+.simple-keyboard.myTheme2 .hg-row .hg-button.myTheme2b {
+  animation: none;
+  background: rgba(255, 60, 60, 0.86);
+  color: white;
+}
+
+.simple-keyboard.myTheme2 .hg-row .hg-button:active {
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.simple-keyboard.myTheme2 .hg-row:nth-child(1) .hg-button {
+  animation-delay: 0.5s;
+}
+.simple-keyboard.myTheme2 .hg-row:nth-child(2) .hg-button {
+  animation-delay: 1s;
+}
+.simple-keyboard.myTheme2 .hg-row:nth-child(3) .hg-button {
+  animation-delay: 1.5s;
+}
+.simple-keyboard.myTheme2 .hg-row:nth-child(4) .hg-button {
+  animation-delay: 2s;
+}
+.simple-keyboard.myTheme2 .hg-row:nth-child(5) .hg-button {
+  animation-delay: 2.5s;
+}
+
+.simple-keyboard.myTheme2 .hg-button:hover span {
+  transform: scale(2);
+  width: 100%;
+  display: inline-block;
+  height: 100%;
+  text-align: center;
+}
+
+@keyframes myTheme2Anim {
+  from {
+    background: #9cbffb;
+  }
+  to {
+    background: #4c7dd0;
+  }
+}

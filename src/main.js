@@ -32,7 +32,22 @@ let vueInstance = new Vue({
 
 keyboard = new Keyboard({
   onChange: input => onChange(input),
-  onKeyPress: button => onKeyPress(button)
+  onKeyPress: button => onKeyPress(button),
+  theme: "myTheme2",
+  buttonTheme: [
+    {
+      class: "myTheme2b",
+      buttons: "{bksp}"
+    }
+  ],
+  display: {
+    "{enter}": "submit",
+    "{bksp}": "delete",
+    "{lock}": "lock",
+    "{shift}": "shift",
+    "{tab}": "tab",
+    "{space}": " "
+  }
 });
 
 console.log(keyboard);
