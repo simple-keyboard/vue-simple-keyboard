@@ -1,7 +1,13 @@
 {
-  "name": "simple-keyboard-vue-js-demo-npm",
+  "name": "vue-simple-keyboard",
   "version": "1.0.0",
-  "description": "",
+  "description": "Javascript Virtual Keyboard for Kiosks, Mobile and Web",
+  "keywords": [
+    "virtual",
+    "keyboard",
+    "onscreen",
+    "kiosk"
+  ],
   "main": "src/main.js",
   "private": true,
   "scripts": {
@@ -75,6 +81,5 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ],
-  "keywords": []
+  ]
 }

@@ -5,6 +5,7 @@ import App from "./App";
 
 import Keyboard from "simple-keyboard";
 import "simple-keyboard/build/css/index.css";
+import "./index.css";
 
 Vue.config.productionTip = false;
 

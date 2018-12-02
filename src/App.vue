@@ -26,19 +26,4 @@ app {
   margin-top: 60px;
 }
 
-input {
-  width: 100%;
-  height: 100px;
-  padding: 20px;
-  font-size: 20px;
-  border: none;
-}
-
-.img {
-  text-align: center;
-}
-
-.img img {
-  width: 100px;
-}
 </style>
