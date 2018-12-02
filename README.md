@@ -2,7 +2,7 @@
 <a href="https://simple-keyboard.com/demo" title="View Demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/simplekeyboard-banner3x.png" align="center" width="100%"></a>
 
   <p>
-  <blockquote><strong>This is a repository for simple-keyboard's Vue.js demos</strong> <br /> https://virtual-keyboard.js.org/angular</blockquote>
+  <blockquote><strong>This is a repository for simple-keyboard's Vue.js demos</strong> <br /> https://virtual-keyboard.js.org/vuejs</blockquote>
    </p>
    <br />
 
