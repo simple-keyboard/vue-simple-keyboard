@@ -7,7 +7,6 @@ input {
   box-sizing: border-box;
 }
 
-
 .keyboardContainer {
   display: flex;
   background-color: rgba(0, 0, 0, 0.1);
@@ -24,7 +23,7 @@ input {
 .simple-keyboard-main.simple-keyboard {
   width: 640px;
   min-width: 640px;
-  background: none;
+  background-color: transparent;
 }
 
 .simple-keyboard-main.simple-keyboard .hg-row:first-child {
@@ -33,17 +32,17 @@ input {
 
 .simple-keyboard-arrows.simple-keyboard {
   align-self: flex-end;
-  background: none;
+  background-color: transparent;
 }
 
 .simple-keyboard .hg-button.selectedButton {
-  background: rgba(5, 25, 70, 0.53);
+  background-color: rgba(5, 25, 70, 0.53);
   color: white;
 }
 
 .simple-keyboard .hg-button.emptySpace {
   pointer-events: none;
-  background: none;
+  background-color: transparent;
   border: none;
   box-shadow: none;
 }
@@ -68,7 +67,7 @@ input {
 }
 
 .simple-keyboard-control.simple-keyboard {
-  background: none;
+  background-color: transparent;
 }
 
 .simple-keyboard-control.simple-keyboard .hg-row:first-child {
@@ -89,7 +88,7 @@ input {
 }
 
 .simple-keyboard-numpad.simple-keyboard {
-  background: none;
+  background-color: transparent;
 }
 
 .simple-keyboard-numpad.simple-keyboard {
@@ -105,7 +104,7 @@ input {
 
 .simple-keyboard-numpadEnd.simple-keyboard {
   width: 50px;
-  background: none;
+  background: transparent;
   margin: 0;
   padding: 5px 5px 5px 0;
 }
