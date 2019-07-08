@@ -1,6 +1,13 @@
 {
-  "name": "codesandbox",
-  "version": "0.1.0",
+  "name": "vue-simple-keyboard",
+  "version": "2.0.0",
+  "description": "Javascript Virtual Keyboard for Kiosks, Mobile and Web",	
+  "keywords": [	
+    "virtual",	
+    "keyboard",	
+    "onscreen",	
+    "kiosk"	
+  ],
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
