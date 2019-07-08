@@ -17,7 +17,6 @@
 <script>
 import Keyboard from "simple-keyboard";
 import "simple-keyboard/build/css/index.css";
-
 export default {
   name: "SimpleKeyboard",
   props: {
@@ -40,7 +39,6 @@ export default {
       mergeDisplay: true,
       debug: true
     };
-
     this.keyboard = new Keyboard(".simple-keyboard-main", {
       ...commonKeyboardOptions,
       /**
@@ -81,7 +79,6 @@ export default {
         "{metaright}": "cmd ⌘"
       }
     });
-
     this.keyboardControlPad = new Keyboard(".simple-keyboard-control", {
       ...commonKeyboardOptions,
       layout: {
@@ -92,14 +89,12 @@ export default {
         ]
       }
     });
-
     this.keyboardArrows = new Keyboard(".simple-keyboard-arrows", {
       ...commonKeyboardOptions,
       layout: {
         default: ["{arrowup}", "{arrowleft} {arrowdown} {arrowright}"]
       }
     });
-
     this.keyboardNumPad = new Keyboard(".simple-keyboard-numpad", {
       ...commonKeyboardOptions,
       layout: {
@@ -112,7 +107,6 @@ export default {
         ]
       }
     });
-
     this.keyboardNumPadEnd = new Keyboard(".simple-keyboard-numpadEnd", {
       ...commonKeyboardOptions,
       layout: {
@@ -126,7 +120,6 @@ export default {
     },
     onKeyPress(button) {
       this.$emit("onKeyPress", button);
-
       /**
        * If you want to handle the shift and caps lock buttons
        */
@@ -141,7 +134,6 @@ export default {
     handleShift() {
       let currentLayout = this.keyboard.options.layoutName;
       let shiftToggle = currentLayout === "default" ? "shift" : "default";
-
       this.keyboard.setOptions({
         layoutName: shiftToggle
       });
