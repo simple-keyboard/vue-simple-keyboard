@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-keyboard",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Javascript Virtual Keyboard for Kiosks, Mobile and Web",	
   "keywords": [	
     "virtual",	
@@ -8,6 +8,16 @@
     "onscreen",	
     "kiosk"	
   ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hodgef/simple-keyboard"
+  },
+  "author": "Francisco Hodge <hello@franciscohodge.com> (https://github.com/hodgef)",
+  "bugs": {
+    "url": "https://github.com/hodgef/simple-keyboard/issues"
+  },
+  "homepage": "https://virtual-keyboard.js.org/vuejs",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
