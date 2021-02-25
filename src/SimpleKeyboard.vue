@@ -21,7 +21,7 @@ export default {
     keyboard: null
   }),
   mounted() {
-    this.keyboard = new Keyboard({
+    this.keyboard = new Keyboard(this.keyboardClass, {
       onChange: this.onChange,
       onKeyPress: this.onKeyPress
     });
