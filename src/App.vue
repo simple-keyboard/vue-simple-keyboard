@@ -3,10 +3,15 @@
     <input
       :value="input"
       class="input"
+      ref="input"
       @input="onInputChange"
       placeholder="Tap on the virtual keyboard to start"
-    >
-    <SimpleKeyboard @onChange="onChange" @onKeyPress="onKeyPress" :input="input"/>
+    />
+    <SimpleKeyboard
+      @onChange="onChange"
+      @onKeyPress="onKeyPress"
+      :input="input"
+    />
   </div>
 </template>
 
@@ -17,22 +22,40 @@ import "./App.css";
 export default {
   name: "App",
   components: {
-    SimpleKeyboard
+    SimpleKeyboard,
   },
   data: () => ({
-    input: ""
+    input: "",
   }),
   methods: {
-    onChange(input) {
+    onChange(input, keyboard) {
+      const inputElement = this.$refs.input;
       this.input = input;
+
+      /**
+       * Synchronizing input caret position
+       */
+      let caretPosition = keyboard.caretPosition;
+      if (caretPosition !== null)
+        this.setInputCaretPosition(inputElement, caretPosition);
+
+      console.log("caretPosition", caretPosition, inputElement);
+    },
+    setInputCaretPosition(elem, pos) {
+      setTimeout(() => {
+        if (elem.setSelectionRange) {
+          elem.focus();
+          elem.setSelectionRange(pos, pos);
+        }
+      });
     },
     onKeyPress(button) {
       console.log("button", button);
     },
     onInputChange(input) {
       this.input = input.target.value;
-    }
-  }
+    },
+  },
 };
 </script>
 

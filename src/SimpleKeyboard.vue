@@ -11,27 +11,27 @@ export default {
   props: {
     keyboardClass: {
       default: "simple-keyboard",
-      type: String
+      type: String,
     },
     input: {
-      type: String
-    }
+      type: String,
+    },
   },
   data: () => ({
-    keyboard: null
+    keyboard: null,
   }),
   mounted() {
     this.keyboard = new Keyboard(this.keyboardClass, {
       onChange: this.onChange,
-      onKeyPress: this.onKeyPress
+      onKeyPress: this.onKeyPress,
     });
   },
   methods: {
     onChange(input) {
-      this.$emit("onChange", input);
+      this.$emit("onChange", input, this.keyboard);
     },
     onKeyPress(button) {
-      this.$emit("onKeyPress", button);
+      this.$emit("onKeyPress", button, this.keyboard);
 
       /**
        * If you want to handle the shift and caps lock buttons
@@ -43,18 +43,17 @@ export default {
       let shiftToggle = currentLayout === "default" ? "shift" : "default";
 
       this.keyboard.setOptions({
-        layoutName: shiftToggle
+        layoutName: shiftToggle,
       });
-    }
+    },
   },
   watch: {
     input(input) {
       this.keyboard.setInput(input);
-    }
-  }
+    },
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>
+<style scoped></style>
